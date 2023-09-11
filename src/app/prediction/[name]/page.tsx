@@ -30,6 +30,7 @@ export default async function prediction({ params }: Params) {
     countryData,
   ]);
 
+
   return (
     <div className="flex flex-col justify-center items-center shadow-md">
       <div className="bg-white px-10 py-5 rounded">
