@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation"
 export default function Home() {
   const [inputVal, setinputVal] = useState("")
   const {push} = useRouter()
-  
+
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault() //Don't Refresh
-    push(`/prediction/${inputVal}`)
+    push(`/prediction/${inputVal}/`)
   }
   return (
     <div className="w-full max-w-xs">

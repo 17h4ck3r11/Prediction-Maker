@@ -1,4 +1,5 @@
 import React from "react";
+import { FormEvent } from "react";
 
 const getPredictedAge = async (name: string) => {
   const res = await fetch(`https://api.agify.io/?name=${name}`);
@@ -30,6 +31,9 @@ export default async function prediction({ params }: Params) {
     countryData,
   ]);
 
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault() //Don't Refresh
+  }
 
   return (
     <div className="flex flex-col justify-center items-center shadow-md">
